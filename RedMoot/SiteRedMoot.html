@@ -1,0 +1,154 @@
+ <!doctype html>
+ <html lang="fr">
+	<head>
+		<link href="https://fr.allfont.net/allfont.css?fonts=permanent-marker" rel="stylesheet" type="text/css" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<meta claurset="utf-8"/>
+		<script src="https://maps.google.com/maps/api/js?key=RedmootTest" type="text/javascript"></script>
+		<script async type="text/javascript">
+			// On initialise la latitude et la longitude de Paris (centre de la carte)
+			var lat = 48.852969;
+			var lon = 2.349903;
+			var map = null;
+			// Fonction d'initialisation de la carte
+			function initMap() {
+				// Créer l'objet "map" et l'insèrer dans l'élément HTML qui a l'ID "map"
+				map = new google.maps.Map(document.getElementById("map"), {
+					// Nous plaçons le centre de la carte avec les coordonnées ci-dessus
+					center: new google.maps.LatLng(lat, lon), 
+					// Nous définissons le zoom par défaut
+					zoom: 11, 
+					// Nous définissons le type de carte (ici carte routière)
+					mapTypeId: google.maps.MapTypeId.ROADMAP, 
+					// Nous activons les options de contrôle de la carte (plan, satellite...)
+					mapTypeControl: true,
+					// Nous désactivons la roulette de souris
+					scrollwheel: false, 
+					mapTypeControlOptions: {
+						// Cette option sert à définir comment les options se placent
+						style: google.maps.MapTypeControlStyle.HORIZONTAL_BAR 
+					},
+					// Activation des options de navigation dans la carte (zoom...)
+					navigationControl: true, 
+					navigationControlOptions: {
+						// Comment ces options doivent-elles s'afficher
+						style: google.maps.NavigationControlStyle.ZOOM_PAN 
+					}
+				});
+			}
+			window.onload = function(){
+				// Fonction d'initialisation qui s'exécute lorsque le DOM est chargé
+				initMap();
+				// Nous ajoutons un marqueur
+				var marker = new google.maps.Marker({
+					// Nous définissons sa position (syntaxe json)
+					position: {lat: 43.4865723939475, lng: -1.465426244559272},
+					// Nous définissons à quelle carte il est ajouté
+					map: map
+});
+			};
+		</script>
+		
+		<link
+		rel="stylesheet"
+		href="https://unpkg.com/swiper@8/swiper-bundle.min.css"
+		/>
+
+		<script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+		<script type="module">
+		import Swiper from 'https://unpkg.com/swiper@8/swiper-bundle.esm.browser.min.js'
+
+		const swiper = new Swiper('.swiper', {
+		// Optional parameters
+		direction: 'horizontal',
+		loop: true,
+		
+		// If we need pagination
+		pagination: {
+			el: '.swiper-pagination',
+		},
+		
+		// Navigation arrows
+		navigation: {
+			nextEl: '.swiper-button-next',
+			prevEl: '.swiper-button-prev',
+		},
+		});
+		</script>
+		<title>RedMoot</title>
+		<!-- CSS only -->
+		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+		<link rel="stylesheet" type="text/css" href="css.css"/>
+		<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+		<script src="countrystatecity.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	</head>
+	<body>
+		<nav>
+			<ul>
+				<li><a href="">AGENCY</a></li>
+				<li><a href="">WHO ARE WE ?</a></li>
+				<li><a href="">WORK</a></li>
+				<li><img src="logo.svg"></li>
+				<li><a href="">TEAM</a></li>
+				<li><a href="">LOCALISATION</a></li>
+				<li class="menucontact"><a href="">CONTACT</a></li>
+			</ul>
+		</nav>
+		
+		<div class="trait">
+		
+		</div>
+		<div class="contact">
+			<h3>How to contact us</h3>
+			<h5>rem ipsum dolor sit amet, cosectetur adipiscing, sed do eius-<BR>
+			mod tempor incididunt ut labore et dolore magna aliqua. Ut enim<BR>
+			ad minim veniam, quis nostru</h5>
+			<img src="phone.svg" id="tel"> 05 59 20 90 50<br>
+			
+			
+		</div>
+		<div class="findus">
+			<h3>How to find us</h3>
+			<h5>rem ipsum dolor sit amet, cosectetur adipiscing, sed do eius-<BR>
+			mod tempor incididunt ut labore et dolore magna aliqua. Ut enim<BR>
+			ad minim veniam, quis nostru</h5>
+			<h4>33 avenue de l'aquitaine</h4>
+			<h4>64100 bayonne</h4>
+		</div>
+		<div id="map">
+		
+		</div>
+		<div class="swiper">
+		<div class="swiper-wrapper" id="imgslide">
+			<div class="swiper-slide" ><img src="photo1.jpg"></div>
+			<div class="swiper-slide" ><img src="photo2.jpg"></div>
+			<div class="swiper-slide" ><img src="photo3.jpg"></div>
+		</div>
+		<div class="swiper-pagination"></div>
+		<div class="swiper-button-prev"></div>
+		<div class="swiper-button-next"></div>
+		</div>
+		<div class="messagehaut">
+		<h3>drop us a line</h3>
+		<h5>ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod<br>
+		tempor incididunt ut labore et dolore magna aliqua</h5>
+		<br><br>
+		</div>
+		<div class="messageform">
+		<h4>Choose your country*</h4>
+		<form action="" method="post">
+		<div>
+        <select name="Pays" class="pays " id="idPays">
+		</select>
+		</div>
+		<h4>Name*</h4>
+		<input type="text">	
+		<h4>Mail address*</h4>
+		<input type="text">
+		<h4>Message*</h4>
+		<input type="text"><br><br>
+		<button type="button">SEND</button>
+		</form>
+	</div>
+</html>

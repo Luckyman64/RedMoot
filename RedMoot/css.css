@@ -1,0 +1,128 @@
+ *{
+	margin: 0px;
+	padding: 0px;
+	font-family: Avenir, sans-serif;
+}
+
+nav ul{
+	list-style-type: none;
+}
+
+nav li{
+	float: left;
+	width: 14%;
+	text-align: center;
+	margin-top: 50px;
+}
+
+nav ul::after{
+	content: "";
+	display: flex;
+	clear: both;
+}
+
+nav{
+	width: 100%;
+	margin: 0 auto;
+	background-image: url("texture.png");
+	height: 250px;
+	vertical-align: center;	
+	
+}
+.menucontact{
+	color:linear-gradient(to right, #ed1e79, #6d0063);
+}
+
+nav img{
+	text-align: center;
+	height:100px;
+}
+nav a{
+	text-decoration: none;
+	color:black;
+	font-family: "Permanent Marker";
+	font-weight:100;
+	
+}
+#tel{
+	text-align: center;
+	height:20px;
+}
+
+
+body{
+}
+
+.trait{
+	background: linear-gradient(to right, #ed1e79, #6d0063);
+  height: 25px;
+}
+
+.contact{
+	float: left;
+	width:740.5px;
+	height:300px;
+	vertical-align: middle;
+	padding-left: 100px;
+	padding-top: 50px;
+}
+
+.findus{
+	background-image:url("localisation.jpg");
+	background-size: 740.5px 500px;
+	height: 500px;
+	float: left;
+	color: #FFFFFF;
+	width:740.5px;
+	padding-left:100px;
+	padding-top:100px;
+}
+
+.messagehaut{
+	background: linear-gradient(to right, #ed1e79, #6d0063);
+	height:200px;
+	width:740px;
+	float: top;
+	margin-left:740.5px;
+	text-align: center;
+	padding-top: 100px;
+	color: #FFFFFF;
+}
+.messageform{
+	background: linear-gradient(to right, #ed1e79, #6d0063);
+	height:700px;
+	width:740px;
+	float: top;
+	margin-left:740.5px;
+	color: #FFFFFF;
+	padding-left:150px;
+}
+h3{
+	font-family: 'Permanent Marker';
+}
+
+h5{
+	font-family: 'Roboto';
+}
+#map{
+	float : left;
+	width:740.5px;
+	height:400px;
+}
+.swiper {	
+  width: 740px;
+  height: 300px;
+}
+
+.swiper-pagination{
+	color:#ed1e79;
+}
+
+#imgslide{
+	width:100px;
+	height:100px;
+}
+button{
+	text-align:center;
+	padding-left:20px;
+}
